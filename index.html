@@ -11,7 +11,10 @@ role-tables:
   - roles: [grad]
     width: 8
     image: true
-- - roles: [collab, ugrad, ugrad-alum]
+- - roles: [collab]
+    width: 12
+    image: true
+- - roles: [ugrad, ugrad-alum]
     width: 5
     image: false
   - roles: [alum]
@@ -20,12 +23,45 @@ role-tables:
 
 ---
 
-<div class="jumbotron">
+<div class="jumbotron banner-with-media">
+    <div class="banner-copy">
+    <p class="lab-eyebrow">PRISM Lab &middot; The University of Texas at Austin</p>
+    <h1>Predictive In Silico Medicine Lab</h1>
     <p>
-        The <b>Awesome Research Group</b> at <b>Example U</b> does all sorts of
-        research. Here is a place where we tell you exactly what that is!
+        We combine computational biomechanics, multiscale modeling, and scientific machine learning to understand cardiovascular tissues respond to disease and treatment.
     </p>
+    <p>
+        Our vision is to develop next-generation multiscale models
+        that integrate mechanistic growth and remodeling (G&amp;R)
+        into computational fluid dynamics (CFD) simulations of
+        complex cardiovascular geometries. This approach couples
+        organ-scale hemodynamics with cell- and tissue-level remodeling to:
+    </p>
+    <ul class="research-goals">
+        <li>Identify biomechanical causes of disease initiation and progression.</li>
+        <li>Enable precision treatment planning that reduces morbidity and mortality
+            due to cardiovascular disease.</li>
+        <li>Combine physics-based simulations with emerging machine learning techniques
+            to enable clinically actionable predictions.</li>
+    </ul>
+    <a class="btn btn-primary" href="{{ site.base }}/research.html">Explore our research</a>
+    </div>
+    <div class="banner-media">
+        <img src="{{ site.base }}/img/projects/cardiovascular-simulation.gif"
+             alt="Blood-flow velocity in a three-dimensional cardiovascular simulation"
+             class="banner-animation" />
+    </div>
 </div>
+
+<section class="recruitment-callout" aria-labelledby="recruitment-heading">
+    <div>
+        <h2 id="recruitment-heading">Join the PRISM Lab</h2>
+        <p>We are recruiting students and postdoctoral researchers interested
+            in computational medicine, cardiovascular biomechanics, and scientific
+            machine learning. Help us build predictive tools for better patient care.</p>
+    </div>
+    <a class="btn btn-primary" href="{{ site.base }}/positions.html">Join us</a>
+</section>
 
 <section>
     <h2>News</h2>

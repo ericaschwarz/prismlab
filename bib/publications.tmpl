@@ -1,23 +1,18 @@
 <table class="table">
 <tbody>
-	{%- set prev_year = 1900 %}
 	{%- for entry in entries %}
 	<tr>
 		<td>
 			<span class="date">
-				{% if entry.fields['year'] != prev_year %}
-				<big><strong>{{ entry.fields['year'] }}</strong></big><br />
+				{% if loop.first or entry.fields['year'] != entries[loop.index0 - 1].fields['year'] %}
+				<big><strong>{{ entry.fields['year'] }}</strong></big>
 				{% endif %}
-				{%- set prev_year = entry.fields['year'] %}
-				{{ entry.fields['month']|monthname }}
 			</span>
 		</td>
 		<td class="publication">
 			<span class="pubtitle">
 				{%- set url = entry|main_url %}
 				{%- if url %}
-				<img src="img/pdficon_small.png" width="16"
-					height="16" alt="PDF" />
 				<a href="{{ url|escape }}">{{ entry|title }}</a>.
 				{%- else %}
 				{{ entry|title }}.

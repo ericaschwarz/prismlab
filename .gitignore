@@ -1,3 +1,4 @@
 _site
+.venv/
 _includes/pubs.html
 /test-deploy.sh

@@ -3,6 +3,9 @@
     <head>
         <title>{{ site.name }}: {{ page.title }}</title>
         <meta charset="utf-8">
+        <meta name="description" content="{{ page.description | default: site.description | escape }}">
+        <meta name="color-scheme" content="dark">
+        <meta name="theme-color" content="#111827">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
@@ -12,16 +15,15 @@
               href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ site.base }}/css/group.css">
     </head>
-    <body>
+    <body{% if page.body_class %} class="{{ page.body_class | escape }}"{% endif %}>
         <div class="container">
             <!-- This is a bit nasty, but it basically says be a column first, and on larger screens be a spaced out row -->
             <div class="header d-flex
                         flex-column
                         flex-md-row justify-content-md-between">
-                <a href="{{ site.base }}/" class="">
-                    <img src="{{ site.base }}/img/logo.png"
-                         srcset="{{ site.base }}/img/logo@2x.png 2x"
-                         alt="Awesome" id="logo">
+                <a href="{{ site.base }}/" class="lab-brand" aria-label="{{ site.name }} home">
+                    <span class="lab-brand-name">{{ site.short_name }}</span>
+                    <span class="lab-brand-subtitle">Predictive In Silico Medicine</span>
                 </a>
                 <ul class="nav nav-pills justify-content-center">
 
@@ -65,9 +67,9 @@
 
             <div class="footer">
                 <p>
-                    <a href="http://dept.example.edu/">Illustrious Department</a>
-                    at the
-                    <a href="http://example.edu/">University of Example</a>
+                    {{ site.short_name }} &middot;
+                    <a href="https://www.oden.utexas.edu/">Oden Institute for Computational Engineering and Sciences</a>
+                    &middot; <a href="https://www.utexas.edu/">The University of Texas at Austin</a>
                 </p>
             </div>
 

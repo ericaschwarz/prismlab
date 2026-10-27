@@ -37,6 +37,12 @@ there by default by Bootstrap columns.
             {% if person.bio %}
                 <div class="bio">{{person.bio}}</div>
             {% endif %}
+            {% if person.department %}
+                <div class="bio">{{ person.department }}</div>
+            {% endif %}
+            {% if person.affiliation %}
+                <div class="bio">{{ person.affiliation }}</div>
+            {% endif %}
         </div>
     </div>
 {% else %}
@@ -44,6 +50,12 @@ there by default by Bootstrap columns.
         {{ name }}
         {% if person.bio %}
             <span class="bio">{{person.bio}}</span>
+        {% endif %}
+        {% if person.department %}
+            <span class="bio">{{ person.department }}</span>
+        {% endif %}
+        {% if person.affiliation %}
+            <span class="bio">{{ person.affiliation }}</span>
         {% endif %}
     </div>
 {% endif %}

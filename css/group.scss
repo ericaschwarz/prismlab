@@ -1,12 +1,77 @@
 ---
 ---
 
-$gray: #999;
-$light-gray: #EEE;
+$gray: #a8b3c4;
+$light-gray: #303c50;
+$background: #111827;
+$surface: #1c2636;
+$foreground: #e5eaf2;
+$accent: #8abaff;
+$panel-radius: 12px;
+
+html {
+    color-scheme: dark;
+    background: $background;
+}
 
 /* Space out content a bit */
 body {
     padding-top: 20px;
+    background-color: $background;
+    color: $foreground;
+}
+
+a {
+    color: $accent;
+    &:hover, &:focus {
+        color: #bed8ff;
+    }
+}
+
+a:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 3px;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0.35rem;
+    &:hover, &:focus {
+        background-color: $surface;
+    }
+    &.active {
+        color: #111827;
+        background-color: $accent;
+    }
+}
+
+.text-muted {
+    color: $gray !important;
+}
+
+hr, .table th, .table td, .table thead th {
+    border-color: $light-gray;
+}
+
+pre, code, kbd, samp {
+    color: #d3b7ff;
+    background-color: $surface;
+}
+
+pre {
+    padding: 1rem;
+    border: 1px solid $light-gray;
+    border-radius: $panel-radius;
+}
+
+blockquote {
+    border-left: 3px solid $light-gray;
+    padding-left: 1rem;
+    color: $gray;
+}
+
+::selection {
+    background: #355584;
+    color: #fff;
 }
 
 .header {
@@ -14,6 +79,54 @@ body {
     padding-bottom: 10px;
     margin-bottom: 20px;
     text-align: center;
+}
+
+.lab-brand {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    &:hover, &:focus { text-decoration: none; }
+}
+
+.lab-brand-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+.lab-brand-subtitle {
+    color: $gray;
+    font-size: 0.8rem;
+}
+
+.lab-eyebrow {
+    color: $accent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.btn-primary {
+    background-color: $accent;
+    border-color: $accent;
+    color: $background;
+    white-space: normal;
+    &:hover, &:focus {
+        background-color: #bed8ff;
+        border-color: #bed8ff;
+        color: $background;
+    }
+}
+
+.recruitment-callout {
+    padding: 1.5rem;
+    background-color: $surface;
+    border: 1px solid $light-gray;
+    border-left: 4px solid $accent;
+    border-radius: $panel-radius;
+    h2 { font-size: 1.5rem; }
 }
 
 .footer {
@@ -45,10 +158,63 @@ a > .fa {
 
 /* Jumbotron */
 .jumbotron {
-    text-align: justify;
+    background-color: $surface;
+    border-radius: $panel-radius;
+    text-align: left;
     padding-top: 1.5em;
-    padding-bottom: 0.5em;
-    font-size: 125%
+    padding-bottom: 1.5em;
+    font-size: 112.5%;
+
+    h1 {
+        font-size: 2.25rem;
+    }
+}
+
+.banner-with-media {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+}
+
+.banner-copy {
+    min-width: 0;
+}
+
+.banner-media {
+    position: relative;
+    min-height: 300px;
+    background: #000;
+    border-radius: $panel-radius;
+
+    img.banner-animation {
+        background-color: #000;
+        padding: 12px;
+        border-radius: $panel-radius;
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+    }
+}
+
+@media (min-width: 992px) {
+    .banner-with-media {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: stretch;
+    }
+}
+
+/* Research vision list in the main banner. */
+.research-goals {
+    padding-left: 1.25em;
+    margin-bottom: 1.5rem;
+
+    li + li {
+        margin-top: 0.5rem;
+    }
 }
 
 /* Group logo */
@@ -68,6 +234,14 @@ ul.news {
 
     > li {
         margin-top: 1em;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+    }
+
+    > li + li {
+        border-top: 3px solid $light-gray;
+        padding-top: 1em;
     }
 }
 
@@ -80,6 +254,16 @@ ul.news {
     .role.grad      { column-count: 2 }
     .project-people { column-count: 3 }
     .card-columns   { column-count: 3 }
+}
+
+/* Frame content images, including transparent research diagrams. */
+img:not(.profile):not(#logo):not(.banner-animation) {
+    background-color: #fff;
+    padding: 12px;
+    border-radius: $panel-radius;
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
 }
 
 .title img {
@@ -100,11 +284,14 @@ section {
     }
     text {
         font-weight: 700;
-        fill: white;
+        fill: $foreground;
     }
 }
 
 .card {
+    background-color: $surface;
+    border-color: $light-gray;
+    border-radius: $panel-radius;
 
     .profile {
         height: 40px;
@@ -112,7 +299,15 @@ section {
         margin: 3px;
     }
 
-    .card-footer { padding: 0.5em }
+    .card-footer {
+        padding: 0.5em;
+        background-color: #172131;
+        border-top-color: $light-gray;
+
+        &:last-child {
+            border-radius: 0 0 ($panel-radius - 1px) ($panel-radius - 1px);
+        }
+    }
 }
 
 .person {
@@ -138,6 +333,35 @@ section {
 
     .bio {
         margin-left: 1em;
+    }
+}
+
+.positions-page {
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+        margin-top: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    hr {
+        margin: 2rem 0;
+    }
+
+    .position-block {
+        background-color: $surface;
+        border: 1px solid $light-gray;
+        border-radius: $panel-radius;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+
+        > :last-child {
+            margin-bottom: 0;
+        }
     }
 }
 

@@ -49,6 +49,20 @@ Publication List
 
 The list of publications is in `bib/pubs.bib`. Typing `make` will generate `pubs.html`, which contains a pretty, sorted HTML-formatted list of papers. The public page, `publications.html`, also has a link to download the original BibTeX.
 
+If `make` cannot find `bibble`, install the publication dependencies in a local
+virtual environment (Windows PowerShell):
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install bibble
+make
+```
+
+On macOS/Linux, use `.venv/bin/python -m pip install bibble` after creating the
+environment. The Makefile automatically uses the local `bibble` installation;
+activation is optional. If an earlier failed build left `_includes/pubs.html`
+empty, run `make -B _includes/pubs.html` once to regenerate it.
+
 
 News Items and Blog Posts
 -------------------------

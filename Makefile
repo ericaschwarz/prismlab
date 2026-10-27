@@ -3,7 +3,16 @@
 
 all: build
 
-BIBBLE = bibble
+# Prefer the project-local installation; command-line overrides still work.
+ifneq ($(wildcard .venv/Scripts/bibble.exe),)
+BIBBLE ?= .venv/Scripts/bibble.exe
+else ifneq ($(wildcard .venv/bin/bibble),)
+BIBBLE ?= .venv/bin/bibble
+else
+BIBBLE ?= bibble
+endif
+
+.DELETE_ON_ERROR:
 
 _includes/pubs.html: bib/pubs.bib bib/publications.tmpl
 	mkdir -p _includes
