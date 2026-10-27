@@ -53,7 +53,7 @@
             </div>
 
             {% if page.image %}
-                <img src="{{ page.image }}"
+                <img src="{% if page.image contains '://' %}{{ page.image }}{% else %}{{ page.image | relative_url }}{% endif %}"
                      alt="{{ page.title }}"
                      style="max-width: 400px"
                      class="img-fluid mx-auto d-block mb-4"/>
