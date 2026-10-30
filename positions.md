@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Join PRISM Lab
+title: Join the PRISM Lab
 description: "Undergraduate, graduate student, and postdoctoral research opportunities in computational biomechanics and scientific machine learning at PRISM Lab, UT Austin."
 permalink: /positions.html
 body_class: positions-page
@@ -22,12 +22,12 @@ Explore our [research projects]({{ site.base }}/research.html) and [publications
 
 Applicants with backgrounds in engineering, applied mathematics, computer science, or related fields should apply through the Oden Institute's **Computational Science, Engineering, and Mathematics (CSEM)** graduate program.
 
-Follow the [CSEM application instructions](https://oden.utexas.edu/academics/prospective-students/how-to-apply/) and indicate Erica L. Schwarz as a potential research advisor. After applying, you are welcome to email Erica with your CV and a short research statement explaining how your interests connect with PRISM Lab.
+Follow the [CSEM application instructions](https://oden.utexas.edu/academics/prospective-students/how-to-apply/) and indicate Erica L. Schwarz as a potential research advisor. After applying, you are welcome to email Erica with your CV and a short research statement explaining how your interests connect witht the PRISM Lab.
 
 
 ### Current UT Austin students
 
-Current UT Austin graduate students interested in joining or collaborating with PRISM Lab are encouraged to email Erica L. Schwarz. Please include your CV and a brief research statement describing your current program, research experience, and interests in the lab's work.
+Current UT Austin graduate students interested in joining or collaborating with PRISM Lab are encouraged to email Erica Schwarz. Please include your CV and a brief research statement describing your current program, research experience, and interests in the lab's work.
 
 
 </section>
@@ -36,7 +36,7 @@ Current UT Austin graduate students interested in joining or collaborating with 
 
 ## Postdoctoral researchers
 
-PRISM Lab is recruiting postdoctoral researchers. Please email Erica L. Schwarz with your CV and a research statement describing your research interests, relevant expertise, and how your expertise aligns with the lab's goals.
+The PRISM Lab is recruiting postdoctoral researchers. Please email Erica Schwarz with your CV and a research statement describing your research interests, relevant expertise, and how your expertise aligns with the lab's goals.
 
 Prospective postdoctoral researchers are also encouraged to apply for the Oden Institute's [Peter O'Donnell Jr. Postdoc Fellowship](https://oden.utexas.edu/programs-and-awards/odonnell-jr-postdoc-fellowship/). If you are interested in working with Erica, list her name on your application and mention in your email whether you have applied for the fellowship.
 
@@ -46,6 +46,6 @@ Prospective postdoctoral researchers are also encouraged to apply for the Oden I
 
 ## Undergraduate students
 
-We welcome undergraduate students interested in computational medicine, biomechanics, or scientific machine learning. To inquire about research opportunities, please email Erica L. Schwarz with your CV and a research statement describing your interests, relevant experience, and what you hope to learn in PRISM Lab.
+We welcome undergraduate students interested in computational medicine, biomechanics, or scientific machine learning. To inquire about research opportunities, please email Erica L. Schwarz with your CV and a research statement describing your interests, relevant experience, and what you hope to learn in the PRISM Lab.
 
 </section>
