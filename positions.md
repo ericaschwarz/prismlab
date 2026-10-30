@@ -22,7 +22,7 @@ Explore our [research projects]({{ site.base }}/research.html) and [publications
 
 Applicants with backgrounds in engineering, applied mathematics, computer science, or related fields should apply through the Oden Institute's **Computational Science, Engineering, and Mathematics (CSEM)** graduate program.
 
-Follow the [CSEM application instructions](https://oden.utexas.edu/academics/prospective-students/how-to-apply/) and indicate Erica L. Schwarz as a potential research advisor. After applying, you are welcome to email Erica with your CV and a short research statement explaining how your interests connect witht the PRISM Lab.
+Follow the [CSEM application instructions](https://oden.utexas.edu/academics/prospective-students/how-to-apply/) and indicate Erica Schwarz as a potential research advisor. After applying, you are welcome to email Erica with your CV and a short research statement explaining how your interests connect witht the PRISM Lab.
 
 
 ### Current UT Austin students
@@ -46,6 +46,6 @@ Prospective postdoctoral researchers are also encouraged to apply for the Oden I
 
 ## Undergraduate students
 
-We welcome undergraduate students interested in computational medicine, biomechanics, or scientific machine learning. To inquire about research opportunities, please email Erica L. Schwarz with your CV and a research statement describing your interests, relevant experience, and what you hope to learn in the PRISM Lab.
+We welcome undergraduate students interested in computational medicine, biomechanics, or scientific machine learning. To inquire about research opportunities, please email Erica Schwarz with your CV and a research statement describing your interests, relevant experience, and what you hope to learn in the PRISM Lab.
 
 </section>
